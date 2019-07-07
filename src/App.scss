@@ -1,0 +1,58 @@
+@mixin flexVertical {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+@mixin flexHorizontal {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+@mixin flexCentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  @include flexHorizontal;
+  @media only screen and  (orientation: portrait) {
+    @include flexVertical;
+  }
+}
+
+.App-logo {
+  pointer-events: none;
+  max-width: 40vw;
+  max-height: 30vh;
+}
+
+.Map {
+  background-color: #9BCB64;
+  width: 75vmax;
+  min-height: 100vh;
+  @media only screen and  (orientation: portrait) {
+    width: 100vw; 
+    min-height: 70vh; 
+  }
+  @include flexCentered;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+main {
+  box-sizing: border-box;
+  @media only screen and  (orientation: landscape) {
+    @include flexVertical;
+    width: 25vmax;
+  }
+  @media only screen and  (orientation: portrait) {
+    @include flexHorizontal;
+    height: 30vmax;
+    text-align: right;
+  }
+  border: solid transparent 2vmax;
+}

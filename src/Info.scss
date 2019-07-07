@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+#info {
+  width: 90%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 1vmin;
+  font-size: calc(5px + 2vmin);
+  @media only screen and  (orientation: portrait) {
+    font-size: calc(6px + 2vmin);
+  }
+  font-family: 'Montserrat';
+}
